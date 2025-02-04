@@ -14,12 +14,33 @@ $blockquote-border: $dove-grey !default;
 body {
   margin: 0;
   padding: 0;
-  background: $body-background url("../assets/bkg.png") 0 0;
+  background: linear-gradient(0deg, rgba(66,99,2,1) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  // background: $body-background url("../assets/bkg.png") 0 0;
   color: $body-foreground;
   font-size: 16px;
   line-height: 1.5;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
+
+// Matrix background
+
+.div_bg {
+	position: relative;
+	top: 0;
+	left: 0;
+  
+	
+}
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;	 
+
+}
+
 
 /* General & 'Reset' Stuff */
 
@@ -27,6 +48,7 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+  background: $body-background;
 }
 
 
