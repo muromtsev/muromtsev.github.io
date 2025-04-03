@@ -3,7 +3,7 @@ layout: post
 title: LiveReload в IDEA
 date: '2025-03-31 22:49:36 +0300'
 author: <author_id>
-categories: [JAVA]
+categories: [Java]
 tags: [idea, spring-boot]
 description: Включение автоперезагрузки проекта
 ---
