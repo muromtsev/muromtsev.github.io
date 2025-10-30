@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+# Установка зависимостей Jekyll
+bundle install
+
+# Настройка Git
+git config --global --add safe.directory /workspaces/muromtsev.github.io
+
+# Права доступа
+sudo chown -R vscode:vscode /workspaces/muromtsev.github.io
+
+# Node.js зависимости (если нужны)
 if [ -f package.json ]; then
   bash -i -c "nvm install --lts && nvm install-latest-npm"
   npm i
@@ -16,3 +26,5 @@ sed -i -E "s/^(plugins=\()(git)(\))/\1\2 zsh-syntax-highlighting zsh-autosuggest
 
 # Avoid git log use less
 echo -e "\nunset LESS" >>~/.zshrc
+
+echo "Dev container setup complete!"

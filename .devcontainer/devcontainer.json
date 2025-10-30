@@ -1,13 +1,25 @@
 {
   "name": "Jekyll",
   "image": "mcr.microsoft.com/devcontainers/jekyll:2-bullseye",
+  
   "onCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh"
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "files.associations": {
+          "*.md": "markdown",
+          "*.html": "liquid",
+          "**/_posts/*.md": "markdown",
+          "**/_layouts/*.html": "liquid",
+          "**/_includes/*.html": "liquid"
+        },
+        "emmet.includeLanguages": {
+          "liquid": "html"
+        }
       },
+      
       "extensions": [
         // Liquid tags auto-complete
         "killalau.vscode-liquid-snippets",
